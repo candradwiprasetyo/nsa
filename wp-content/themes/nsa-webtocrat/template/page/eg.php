@@ -26,7 +26,11 @@
 		</div><!-- end.wrapTop -->
 
 
-
+        <?php
+            $q_school = mysql_query("select * from education_grade_home where eg_id = '".$_GET['eg_id']."'");
+            $r_school = mysql_fetch_array($q_school);
+                    
+        ?>
 
 	
 	<div class="wrapHeader header_school rich_text">
@@ -35,19 +39,19 @@
              <div class="col-md-3 col-md-offset-2"> 
             <div class="welcome_school2">
                             <div class="contentW_school2">
-                                    <img src="<?php echo home_url(); ?>/wp-content/uploads/images/school1.jpg" alt="Kresnayaha Yahya" />
+                                    <img src="<?php echo home_url(); ?>/wp-content/uploads/images/<?= $r_school['img2'] ?>" alt="Kresnayaha Yahya" />
                             </div>
 			</div>
             
              <div class="welcome_school3">
                             <div class="contentW_school3">
-                                    <img src="<?php echo home_url(); ?>/wp-content/uploads/images/school1.jpg" alt="Kresnayaha Yahya" />
+                                    <img src="<?php echo home_url(); ?>/wp-content/uploads/images/<?= $r_school['img3'] ?>" alt="Kresnayaha Yahya" />
                             </div>
 			</div>
             
             <div class="welcome_school4">
                             <div class="contentW_school4">
-                                    <img src="<?php echo home_url(); ?>/wp-content/uploads/images/school4.png" alt="Kresnayaha Yahya" />
+                                    <img src="<?php echo home_url(); ?>/wp-content/uploads/images/<?= $r_school['img4'] ?>" alt="Kresnayaha Yahya" />
                             </div>
 			</div>
            
@@ -56,11 +60,8 @@
                         
                             <div class="contentW_school">
                                 <div class="photo_school">
-                                    <?php
-                                    $query_owner = mysql_query("select * from home_welcome_pages order by welcome_page_id desc limit 1 ");
-                                    $row_owner = mysql_fetch_array($query_owner);
-                                    ?>
-                                    <img src="<?php echo home_url(); ?>/wp-content/uploads/images/school1.jpg" alt="Kresnayaha Yahya" />
+                                   
+                                    <img src="<?php echo home_url(); ?>/wp-content/uploads/images/<?= $r_school['img1'] ?>" alt="Kresnayaha Yahya" />
                                 </div>
                                 
                             </div>
@@ -75,13 +76,8 @@
 
                             </div>
                             
-                            <div class="school_subtitle"> "Model Pembelajaran Tematik"</div>
-                            <div class="school_content">Berbasis Multiple Intelligence yang
-mengedepankan pada pengembangan
-bakat, minat, dan kemampuan anak di segala
-bidang, sehingga tercipta suasana belajar
-yang interaktif, dan berfokus pada minat
-belajar anak.</div>
+                            <div class="school_subtitle"> <?= $r_school['introduction_name'] ?></div>
+                            <div class="school_content"><?= $r_school['introduction_content'] ?></div>
                        </div>
                    </div>
                    
@@ -96,16 +92,11 @@ belajar anak.</div>
 				<div class="container">
                 
                 	 <div class="col-md-3 col-md-offset-2"> 
-                       <div class="school_box2">
+                       <div class="school_box">
                             <div class="school_title">Testimoni</div>
                             
-                            <div class="school_content">" I come from a small city in East Java called
-Magetan. I am so glad my parents decided to 
-send me to YPPI. I am taught by teachers
-from many countries and learning to speak
-three language and made lots of new
-friends "</div>
-						<div class="school_by"> Nation Star Academy (Preschool)</div>
+                            <div class="school_content"><?= $r_school['testimoni_content'] ?></div>
+						<div class="school_by"> <?= $r_school['testimoni_name'] ?></div>
                        </div>
                    </div>
                 	
@@ -115,11 +106,8 @@ friends "</div>
                         
                             <div class="contentW_school_bottom">
                                 <div class="photo_school_bottom">
-                                    <?php
-                                    $query_owner = mysql_query("select * from home_welcome_pages order by welcome_page_id desc limit 1 ");
-                                    $row_owner = mysql_fetch_array($query_owner);
-                                    ?>
-                                    <img src="<?php echo home_url(); ?>/wp-content/uploads/images/school1.jpg" alt="Kresnayaha Yahya" />
+                                   
+                                    <img src="<?php echo home_url(); ?>/wp-content/uploads/images/<?= $r_school['testimoni_img'] ?>" alt="Kresnayaha Yahya" />
                                 </div>
                                 
                             </div>
@@ -136,53 +124,39 @@ friends "</div>
 		
 		
 		<div class="blockcontent">
-			<div class="allpartner">
-				<div class="container">
-					<div class="col-md-6 col-md-offset-1"> 
-                        <div class="partnership">
-                            <h1>Partnership :</h1>
-                            <?php
-    
-                            $query_partnership = mysql_query("select * from home_partnerships order by partnership_id ");
-                            while($row_partnership = mysql_fetch_array($query_partnership)){
-                                ?>
-                            <div class="col-xs-3">
-                            	<div class="form-group">
-                                <img src="<?php echo home_url(); ?>/wp-content/uploads/images/<?= $row_partnership['partnership_img']?>" alt="" style="width:100%;" />
-                                </div>
+            <div class="background_content_new">
+			
+				    <div class="container">
+					    <div class="col-md-12 col-md-offset-1"> 
+                            <div class="row" >
+                                <div class="title_content_new">Program</div>
                             </div>
-                            
-                            <?php
-                            }
-                            ?>
                         </div>
-					</div>
-                    
-                    <div class="col-md-3" style="padding:0px;"> 
-                        <div class="addressSocmed">
-                        <div class="col-md-12"> 
-                        <div class="form-group"> 
-                          <?php
-    
-                            $query_page_info = mysql_query("select * from home_page_infos limit 1");
-                            $row_page_info = mysql_fetch_array($query_page_info);
-                                ?>
-                            <h1><?= $row_page_info['page_info_name'] ?></h1>
-                            <h5><?= $row_page_info['page_info_address'] ?></h5>
-                            <ul>
-                                <li><h4>Follow Us :</h4></li>
-                                <li><a href="<?= $row_page_info['page_info_facebook'] ?>" title=""><img src="<?php echo WEBTOCRAT_IMAGE_URI; ?>/fb.png" alt="" /></a></li>
-                                <li><a href="<?= $row_page_info['page_info_twitter'] ?>" title=""><img src="<?php echo WEBTOCRAT_IMAGE_URI; ?>/tw.png" alt="" /></a></li>
-                                <li><a href="<?= $row_page_info['page_info_youtube'] ?>" title=""><img src="<?php echo WEBTOCRAT_IMAGE_URI; ?>/yt.png" alt="" /></a></li>
-                            </ul>
-                         </div>
-                         </div>
+                        <div class="col-md-2 col-md-offset-1"> 
+                            <div class="row">
+                                <div class="circle_content_new"><?= $r_school['program1'] ?></div>
+                            </div>
                         </div>
-                        <br />
+                        <div class="col-md-2"> 
+                            <div class="row">
+                                <div class="circle_content_new"><?= $r_school['program2'] ?></div>
+                            </div>
+                        </div>
+                        <div class="col-md-2"> 
+                            <div class="row">
+                                <div class="circle_content_new"><?= $r_school['program3'] ?></div>
+                            </div>
+                        </div>
+                        <div class="col-md-2"> 
+                            <div class="row">
+                                <div class="circle_content_new"><?= $r_school['program4'] ?></div>
+                            </div>
+                        </div>
+
 					</div>
 					<div class="clear_fix"></div>
-				</div>
 			</div>
+			
 		</div>
 	</div><!-- end.wrapContent -->
    
