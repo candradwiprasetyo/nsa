@@ -1,0 +1,113 @@
+/*
+
+----------------------------------------------------------------------------------------------------
+
+	Filename	: meta-box.less
+	Location	: ../less/meta-box/
+	Author		: BAS - Webtocrat Motion
+	Version		: 1.0.0
+	Description	: Styling meta box
+	
+----------------------------------------------------------------------------------------------------
+
+*/
+
+
+#poststuff .inside {
+    margin: 20px 0 0;
+}
+.option-desc {
+    font-style: italic;
+    font-weight: 700;
+}
+.rwmb-info-wrapper {
+    margin: 30px 0;
+}
+.rwmb-field.rwmb-divider-wrapper {
+
+    .rwmb-info-wrapper;
+}
+.rwmb-input .ui-slider-horizontal .ui-slider-handle {
+    // margin-left: -0.1em;
+
+    &.ui-state-focus {
+        // margin-left: -1.2em;
+    }
+}
+.rwmb-input .rwmb-slider-value-label {
+    margin-left: 30px;
+}
+
+.rwmb-label {
+    width: 29%;
+
+    label {
+        margin: 0;
+    }
+
+    ~ .rwmb-input {
+        width: 70%;
+    }
+}
+
+.rwmb-color_filter-wrapper {
+
+    label{
+        margin: 6px 5px;
+        display: inline-block;
+    }
+
+    input[type="checkbox"]:checked {
+
+        & + span {
+            transform: scale(1.5);
+        }
+    } 
+
+    .rwmb-label {
+        label {
+            margin: 0;
+        }
+    }
+
+    .rwmb-color-filter{
+        display:none;
+    }
+}
+
+.rwmb-star_rating-wrapper {
+
+    // .rwmb-input {
+    //     position: relative;
+
+    //     &:before {
+    //         color: #F2A319;
+    //         content: "\f155\f155\f155\f155\f155";
+    //         font-family: "dashicons";
+    //         font-size: 27px;
+    //         left: -1px;
+    //         position: absolute;
+    //         top: 0;
+    //     }
+    // }
+
+    label {
+
+        input {
+            display: none;
+        }
+        span.icon {
+            color: #f2a319;
+            font-family: "dashicons";
+            font-size: 24px;
+        }
+
+        &.rwmb-active {
+
+            span.icon.dashicons-star-empty:before {
+                content: "\f155";
+                color: #f2a319;
+            }
+        }
+    }
+}
