@@ -76,7 +76,7 @@
 
                             </div>
                             
-                            <div class="school_subtitle"> <?= $r_school['introduction_name'] ?></div>
+                            <div class="school_subtitle">" <?= $r_school['introduction_name'] ?> "</div>
                             <div class="school_content"><?= $r_school['introduction_content'] ?></div>
                        </div>
                    </div>
@@ -96,7 +96,7 @@
                             <div class="school_title">Testimoni</div>
                             
                             <div class="school_content"><?= $r_school['testimoni_content'] ?></div>
-						<div class="school_by"> <?= $r_school['testimoni_name'] ?></div>
+						<div class="school_by">" <?= $r_school['testimoni_name'] ?> "</div>
                        </div>
                    </div>
                 	
