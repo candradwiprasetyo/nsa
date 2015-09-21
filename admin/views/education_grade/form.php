@@ -50,28 +50,49 @@
                                 
                                
                                 <div class="box-body">
-                                    <div class="col-md-9">
-                                            <div class="form-group">
-                                              <label>Description</label>
-                                            <textarea class="form-control" name="i_desc" rows="3" placeholder=""><?= $row->slider_desc ?></textarea>
-                                        </div>
+                                    
+                      
+                                       
+                                        <div class="col-md-12">
                                       
-                                        </div>
                                       
-                                        
- 										<div class="col-md-3">
-                                          <div class="form-group">
-                                         <label>Images</label>
+                                        <div class="form-group">
+                                            <label>Name</label>
+                                            <input required type="text" name="i_name" class="form-control" placeholder="" value="<?= $row->eg_name ?>" title="Kode kontrak tidak boleh kosong"/>
+                                        </div>
+
+                                         <div class="form-group">
+                                         <label>Header Image</label>
                                          <?php
                                         if($id){
-										?>
+                                        ?>
                                         <br />
-                                        <img src="../../wp-content/uploads/images/<?= $row->slider_img ?>" style="width:100%;"/>
+                                        <img src="../../wp-content/uploads/images/education_grade/<?= $row->eg_header_img; ?>" style="width:100%;"/>
                                         <?php
-										}
-										?>
-                                           <input type="file" name="i_img" id="i_img" />
+                                        }
+                                        ?>
+                                           <input type="file" name="i_header_img" id="i_header_img" />
                                         </div>
+
+                                        <div class="form-group">
+                                         <label>Footer Image</label>
+                                         <?php
+                                        if($id){
+                                        ?>
+                                        <br />
+                                        <img src="../../wp-content/uploads/images/education_grade/<?= $row->eg_footer_img; ?>" style="width:100%;"/>
+                                        <?php
+                                        }
+                                        ?>
+                                           <input type="file" name="i_footer_img" id="i_footer_img" />
+                                        </div>
+
+                                       
+
+                                        
+                                      
+                                        
+ 										
                                     
                                       
                                         </div>

@@ -50,12 +50,19 @@
                                 
                                
                                 <div class="box-body">
-                                    <div class="col-md-9">
-                                            <div class="form-group">
-                                              <label>Description</label>
-                                            <textarea class="form-control" name="i_desc" rows="3" placeholder=""><?= $row->slider_desc ?></textarea>
-                                        </div>
+                                    
+                      
+                                       
+                                        <div class="col-md-9">
                                       
+                                      
+                                        <div class="form-group">
+                                            <label>Name</label>
+                                            <input required type="text" name="i_name" class="form-control" placeholder="" value="<?= $row->name ?>" title="Kode kontrak tidak boleh kosong"/>
+                                        </div>
+
+                                      
+
                                         </div>
                                       
                                         
@@ -66,7 +73,7 @@
                                         if($id){
 										?>
                                         <br />
-                                        <img src="../../wp-content/uploads/images/<?= $row->slider_img ?>" style="width:100%;"/>
+                                        <img src="../../wp-content/uploads/images/teachers/<?= $row->img ?>" style="width:100%;"/>
                                         <?php
 										}
 										?>

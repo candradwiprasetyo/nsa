@@ -50,12 +50,23 @@
                                 
                                
                                 <div class="box-body">
-                                    <div class="col-md-9">
-                                            <div class="form-group">
-                                              <label>Description</label>
-                                            <textarea class="form-control" name="i_desc" rows="3" placeholder=""><?= $row->slider_desc ?></textarea>
-                                        </div>
+                                    
+                      
+                                       
+                                        <div class="col-md-9">
                                       
+                                      
+                                        <div class="form-group">
+                                            <label>Name</label>
+                                            <input required type="text" name="i_name" class="form-control" placeholder="" value="<?= $row->achievement_name ?>" title="Kode kontrak tidak boleh kosong"/>
+                                        </div>
+
+                                        <textarea id="editor" name="editor" rows="10" cols="80">
+                                            <?php
+                                            echo $row->achievement_desc;
+                                            ?>
+                                        </textarea> 
+
                                         </div>
                                       
                                         
@@ -66,7 +77,7 @@
                                         if($id){
 										?>
                                         <br />
-                                        <img src="../../wp-content/uploads/images/<?= $row->slider_img ?>" style="width:100%;"/>
+                                        <img src="../../wp-content/uploads/images/<?= $row->achievement_img ?>" style="width:100%;"/>
                                         <?php
 										}
 										?>

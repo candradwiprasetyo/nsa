@@ -50,12 +50,40 @@
                                 
                                
                                 <div class="box-body">
-                                    <div class="col-md-9">
-                                            <div class="form-group">
-                                              <label>Description</label>
-                                            <textarea class="form-control" name="i_desc" rows="3" placeholder=""><?= $row->slider_desc ?></textarea>
-                                        </div>
+                                    
+                      
+                                       
+                                        <div class="col-md-9">
                                       
+                                      
+                                        <div class="form-group">
+                                            <label>Name</label>
+                                            <input required type="text" name="i_name" class="form-control" placeholder="" value="<?= $row->name ?>" title="Kode kontrak tidak boleh kosong"/>
+                                        </div>
+
+                                        <div class="form-group"> 
+                                            <div class="radio">
+                                                <label>
+                                                    <input type="radio" name="i_type" id="i_type" value="1" <?php if($row->type==1){ ?>checked<?php } ?>>
+                                                    News
+                                                </label>
+                                            </div>
+                                            <div class="radio">
+                                                <label>
+                                                    <input type="radio" name="i_type" id="i_type" value="2" <?php if($row->type==2){ ?>checked<?php } ?>>
+                                                    Gallery
+                                                </label>
+                                            </div>
+                                            
+                                        </div>
+
+
+                                        <textarea id="editor" name="editor" rows="10" cols="80">
+                                            <?php
+                                            echo $row->content;
+                                            ?>
+                                        </textarea> 
+
                                         </div>
                                       
                                         
@@ -66,7 +94,7 @@
                                         if($id){
 										?>
                                         <br />
-                                        <img src="../../wp-content/uploads/images/<?= $row->slider_img ?>" style="width:100%;"/>
+                                        <img src="../../wp-content/uploads/images/gallery/<?= $row->img ?>" style="width:100%;"/>
                                         <?php
 										}
 										?>

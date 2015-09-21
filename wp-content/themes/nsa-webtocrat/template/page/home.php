@@ -58,7 +58,7 @@
 
 
 			<div class="select_level sl_2">
-				<a href="" title="">
+				<a href="?page_content=eg&eg_id=1" title="">
 					<img class="imgmlhover" src="<?php echo home_url(); ?>/wp-content/uploads/2015/07/hoverlinksch1.jpg" alt="" />
 					TODDLER / KINDERGARTEN
 				</a>
@@ -66,7 +66,7 @@
 
 
 			<div class="select_level sl_3">
-				<a href="" title="">
+				<a href="?page_content=eg&eg_id=2" title="">
 					<img class="imgmlhover" src="<?php echo home_url(); ?>/wp-content/uploads/2015/07/hoverlinksch2.jpg" alt="" />
 					ELEMENTARY SCHOOL
 				</a>
@@ -74,7 +74,7 @@
 
 
 			<div class="select_level sl_4">
-				<a href="" title="">
+				<a href="?page_content=eg&eg_id=3" title="">
 					<img class="imgmlhover" src="<?php echo home_url(); ?>/wp-content/uploads/2015/07/hoverlinksch3.jpg" alt="" />
 					JUNIOR HIGH SCHOOL
 				</a>
@@ -82,7 +82,7 @@
 
 
 			<div class="select_level sl_5">
-				<a href="" title="">
+				<a href="?page_content=eg&eg_id=4" title="">
 					<img class="imgmlhover" src="<?php echo home_url(); ?>/wp-content/uploads/2015/07/hoverlinksch4.jpg" alt="" />
 					SENIOR HIGH SCHOOL
 				</a>

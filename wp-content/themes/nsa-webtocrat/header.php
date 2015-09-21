@@ -21,6 +21,29 @@ include 'template/conf.php';
   	<link href="wp-content/themes/nsa-webtocrat/webtocrat/css/bootstrap.min.css" rel="stylesheet">
 	<link rel="stylesheet" type="text/css" href="wp-content/themes/nsa-webtocrat/webtocrat/css/modal/component.css" />
 	<script src="wp-content/themes/nsa-webtocrat/webtocrat/js/modal/modernizr.custom.js"></script>
+
+	<!-- fancy box -->
+	<script type="text/javascript" src="wp-content/themes/nsa-webtocrat/webtocrat/js/jquery-1.10.1.min.js"></script>
+	<script type="text/javascript" src="wp-content/themes/nsa-webtocrat/webtocrat/js/jquery.fancybox.js?v=2.1.5"></script>
+	<link rel="stylesheet" type="text/css" href="wp-content/themes/nsa-webtocrat/webtocrat/css/fancy-box/jquery.fancybox.css?v=2.1.5" media="screen" />
+
+	<script src="wp-content/themes/nsa-webtocrat/webtocrat/js/SpryAssets/SpryTabbedPanels.js" type="text/javascript"></script>
+<link href="wp-content/themes/nsa-webtocrat/webtocrat/css/SpryAssets/SpryTabbedPanels.css" rel="stylesheet" type="text/css" />
+
+	<script type="text/javascript">
+		$(document).ready(function() {
+			/*
+			 *  Simple image gallery. Uses default settings
+			 */
+
+			$('.fancybox').fancybox();
+
+			
+			
+
+		});
+	</script>
+
 </head>
 <body <?php body_class(); ?>>
 

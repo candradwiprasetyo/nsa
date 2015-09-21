@@ -11,7 +11,7 @@
 					
 		?>
 		<li id="" class="menu-item menu-item-type-post_type menu-item-object-page">
-			<a title="Home" href="?page_content=<?= $row_school_menu['eg_link'] ?>&eg_id=<?= $_GET['eg_id']?>"><?= ucwords($row_school_menu['eg_name']); ?></a>
+			<a title="Home" href="?page_content=<?= $row_school_menu['eg_link'] ?>&eg_id=<?= $_GET['eg_id']?>&egm_id=<?= $row_school_menu['egm_id']?>"><?= ucwords($row_school_menu['eg_name']); ?></a>
 		</li>
 		<?php
 			}
@@ -122,9 +122,14 @@
 		</div>
 
 		
-		
+		<?php
+            $q_eg = mysql_query("select * from education_grades where eg_id = '".$_GET['eg_id']."'");
+            $r_eg = mysql_fetch_array($q_eg);
+
+            $footer_img = $r_eg['eg_footer_img'];
+        ?>
 		<div class="blockcontent">
-            <div class="background_content_new">
+            <div class="background_content_new" style="background: url('<?php echo home_url(); ?>/wp-content/uploads/images/education_grade/<?= $footer_img?>')">
 			
 				    <div class="container">
 					    <div class="col-md-12 col-md-offset-1"> 

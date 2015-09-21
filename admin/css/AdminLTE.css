@@ -2975,3 +2975,10 @@ Component: timeline
   margin-left:auto;
   margin-right:auto;
 }
+
+.new_subtitle{
+  text-align: center;
+  font-weight: bold;
+  color: #666;
+  text-transform: uppercase;
+}

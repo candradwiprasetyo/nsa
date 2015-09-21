@@ -68,7 +68,7 @@
 			</div>
 		</div>
         
-        <div class="container">
+        		<div class="container">
                 	<div class="col-md-12 col-md-offset-1">
                 	<?php
                     $q_adm2 = mysql_query("select * from admissions where admission_id <> '1' order by admission_id limit 3");

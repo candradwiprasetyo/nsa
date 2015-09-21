@@ -133,6 +133,31 @@
                                 <span>Newsletter</span>
                             </a>     
                    </li>
+
+                   <li <?php if(isset($_SESSION['menu_active']) && $_SESSION['menu_active'] == 10){ echo "class='active'"; } ?>>
+                            <a href="menu.php">
+                                <i class="fa fa-circle"></i>
+                                <span>Menu</span>
+                               
+                            </a>
+                            
+                  </li>
+
+                  <li class="treeview <?php if(isset($_SESSION['menu_active']) && $_SESSION['menu_active'] == 5){ echo "active"; }?>">
+                            <a href="#">
+                                <i class="fa fa-circle"></i>
+                                <span>School </span>
+                                <i class="fa fa-angle-left pull-right"></i>
+                            </a>
+                            <ul class="treeview-menu">
+                           
+                                <li><a href="education_grade.php"><i class="fa fa-chevron-circle-right"></i>Education Grade</a></li>
+                                <li><a href="school.php?eg_id=1"><i class="fa fa-chevron-circle-right"></i>Preschool</a></li>
+                                <li><a href="school.php?eg_id=2"><i class="fa fa-chevron-circle-right"></i>Elementary</a></li>
+                                <li><a href="school.php?eg_id=3"><i class="fa fa-chevron-circle-right"></i>Junior High</a></li>
+                                <li><a href="school.php?eg_id=4"><i class="fa fa-chevron-circle-right"></i>Senior High</a></li>
+                               </ul>
+                  </li>
                         
                     <?php
                     if($_SESSION['user_type_id'] == 1){
@@ -151,14 +176,7 @@
 					}
 				 ?>
 
-            <li <?php if(isset($_SESSION['menu_active']) && $_SESSION['menu_active'] == 10){ echo "class='active'"; } ?>>
-                            <a href="menu.php">
-                                <i class="fa fa-circle"></i>
-                                <span>Menu</span>
-                               
-                            </a>
-                            
-                  </li>
+            
               
                     </ul>
                 </section>
